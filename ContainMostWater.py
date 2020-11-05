@@ -9,8 +9,11 @@ class Solution:
 			beg = height[f]
 			end = height[l]
 
+			# check if current is bigger or the smaller of the two sides of container * the length of the container
 			maxarea = max(maxarea, min(beg, end) * (l-f))
 
+			# move left pointer up one if left side < right
+			# otherwise move right pointer down one
 			if beg < end:
 				f += 1
 			else:
